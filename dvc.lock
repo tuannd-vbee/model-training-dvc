@@ -21,12 +21,15 @@ stages:
   train:
     cmd: python src/train.py
     deps:
+    - path: data/csv/test.csv
+      md5: 8f83c60f86ef3effa4652539eb64177d
+      size: 2171
     - path: new_data_inferenced.csv
       md5: d41d8cd98f00b204e9800998ecf8427e
       size: 0
     - path: src/train.py
-      md5: cdd8a5317967b991dbc69eee51dd7004
-      size: 8193
+      md5: 91aff8798266271f29f23ef7af93235f
+      size: 8213
     params:
       params.yaml: {}
     outs:

@@ -16,8 +16,8 @@ import torchaudio
 
 vocab_file = 'data/vocab_vi.json'
 new_data_inferenced_path = 'new_data_inferenced.csv'
-eval_data_path = 'data/csv/tts_address.csv'
-pretrained_checkpoint = 'artifacts/checkpoint-180000'
+eval_data_path = 'data/csv/test.csv'
+pretrained_checkpoint = '/home3/tuannd/asr-training/artifacts/checkpoint-180000'
 
 train_dataset = load_dataset("csv", data_files=new_data_inferenced_path, split="train", cache_dir='./.cache')
 test_dataset = load_dataset("csv", data_files=eval_data_path, split="train", cache_dir='./.cache')

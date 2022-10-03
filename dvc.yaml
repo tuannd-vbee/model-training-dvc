@@ -14,6 +14,7 @@ stages:
     deps:
     - new_data_inferenced.csv
     - src/train.py
+    - data/csv/test.csv
     params:
     - params.yaml:
     outs:
