@@ -1,0 +1,26 @@
+stages:
+  prepare:
+    cmd: python src/prepare_label.py
+    deps:
+    - data/csv/all_data.csv
+    - data/csv/new_data.csv
+    - src/prepare_label.py
+    outs:
+    - new_data_inferenced.csv
+    params:
+    - params.yaml:
+  train:
+    cmd: python src/train.py
+    deps:
+    - new_data_inferenced.csv
+    - src/train.py
+    params:
+    - params.yaml:
+    outs:
+    - checkpoints
+    metrics:
+    - metrics.json:
+        cache: false
+    plots:
+    - metrics/scalars:
+        cache: false
