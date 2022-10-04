@@ -7,17 +7,17 @@ stages:
       md5: d41d8cd98f00b204e9800998ecf8427e
       size: 0
     - path: data/csv/new_data.csv
-      md5: 1eac8f843d5e8511e3a7753543fd2ad6
-      size: 12048
+      md5: 1a675e58b742bd5ead7e3898eee837b2
+      size: 2173
     - path: src/prepare_label.py
-      md5: 64f90613b9f285c974b6f603c7efd53e
-      size: 1518
+      md5: 282ee7a41ea87b4a63b2e71407ad3060
+      size: 1545
     params:
       params.yaml: {}
     outs:
     - path: new_data_inferenced.csv
-      md5: d41d8cd98f00b204e9800998ecf8427e
-      size: 0
+      md5: 73af91ce5cba7aa443b8224314803398
+      size: 2021
   train:
     cmd: python src/train.py
     deps:
@@ -25,22 +25,22 @@ stages:
       md5: 8f83c60f86ef3effa4652539eb64177d
       size: 2171
     - path: new_data_inferenced.csv
-      md5: d41d8cd98f00b204e9800998ecf8427e
-      size: 0
+      md5: 73af91ce5cba7aa443b8224314803398
+      size: 2021
     - path: src/train.py
-      md5: 91aff8798266271f29f23ef7af93235f
-      size: 8213
+      md5: cd6fae608c97a07f22ecb172b48555fe
+      size: 8185
     params:
       params.yaml: {}
     outs:
     - path: checkpoints
-      md5: d751713988987e9331980363e24189ce.dir
-      size: 0
-      nfiles: 0
-    - path: metrics.json
-      md5: d41d8cd98f00b204e9800998ecf8427e
-      size: 0
-    - path: metrics/scalars
-      md5: d751713988987e9331980363e24189ce.dir
-      size: 0
-      nfiles: 0
+      md5: 948f8dc9d4e6724603f34cf8d15af1fa.dir
+      size: 7699783307
+      nfiles: 56
+    - path: dvclive.json
+      md5: e7ffe282f9c44c8e152a46acb1286af7
+      size: 452
+    - path: dvclive/scalars
+      md5: 4198794714817bfc1eb7dd17bd547c18.dir
+      size: 5080
+      nfiles: 12

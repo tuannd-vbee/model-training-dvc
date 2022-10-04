@@ -162,15 +162,14 @@ model = Wav2Vec2Continual.from_pretrained(
 model.freeze_feature_extractor()
 
 training_args = TrainingArguments(
-  output_dir="models",
+  output_dir="checkpoints",
   group_by_length=False,
   per_device_train_batch_size=2,
   evaluation_strategy="steps",
   num_train_epochs=1,
   save_steps=4,
-  eval_steps=200000000000000000,
-  logging_steps=4,
   eval_steps=4,
+  logging_steps=4,
   dataloader_num_workers=6,
   learning_rate=1e-5,
   warmup_steps=0,

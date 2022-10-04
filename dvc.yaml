@@ -18,10 +18,13 @@ stages:
     params:
     - params.yaml:
     outs:
-    - checkpoints
+    - checkpoints:
+        checkpoint: true
     metrics:
-    - metrics.json:
+    - dvclive.json:
         cache: false
+        persist: true
     plots:
-    - metrics/scalars:
+    - dvclive/scalars:
         cache: false
+        persist: true

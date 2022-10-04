@@ -8,7 +8,7 @@ import librosa
 device = 'cuda'
 new_data_path = 'data/csv/new_data.csv'
 all_data_path = 'data/csv/all_data.csv'
-pretrained_checkpoint = 'artifacts/checkpoint-180000'
+pretrained_checkpoint = '/home3/tuannd/asr-training/artifacts/checkpoint-180000'
 new_data_inferenced_path = 'new_data_inferenced.csv'
 
 # load pretrained model
